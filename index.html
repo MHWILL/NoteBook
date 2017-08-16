@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <script src="js/setFont.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	setFontSize();
+    </script>
+ 	<style type="text/css">
+ 		*{margin: 0;padding: 0;list-style: none;}
+ 		header{background: #f9f9f9;}
+ 		header section{width: 80%;margin: 0 auto;}
+ 		body{overflow: hidden;background: #e9e3e1;}
+ 		#index,#page2{width: 100%;float: left;}
+ 		#page2{display: none;overflow-y: auto;}
+ 		#nav,#searchBar{display: flex;height: 40px;padding: 0.133333rem;font-size: 18px;justify-content: space-between;align-items: center;}
+ 		#searchBar{display: none;}
+ 		#searchBar p{width: 80%;height: 30px;border-radius: 10px;border: 1px solid #666;background: #fff;padding-left: 5px;margin: 0;align-items: center;}
+ 		#searchBar input{border: 0;color: #333;width: 80%;font-size: 14px;}
+ 		#searchBar span{color: blue;}
+ 		#lists{width: 80%;margin: 0 auto;overflow: auto;}
+ 		#lists li{padding: 0.266667rem;border-bottom: 1px dotted #C0C0C0;border-left: 1px solid #f90;margin: 0.133333rem 0;}
+ 		#lists p{margin: 0;color: #333;font-size: 18px;}
+ 		#lists span{color: #666;}
+ 		#add{position: fixed;width: 1rem;height: 1rem;border-radius: 50%;background: #f90;color: #fff;text-align: center;line-height: 1rem;font-weight: bold;bottom: 10%;right: 10%;}
+ 		#page2 p,#page2 textarea{display: flex;width: 90%;margin: 0 auto;}
+ 		#page2 textarea{font-size: 16px;line-height: 25px;padding: 0.266667rem;background: rgba( 199, 198, 194,255);color: #F2F2F2;}
+ 		#page2 p{height: 30px;padding: 10px;justify-content:space-between ;align-items: center;}
+ 		#nav_page2{display: flex;width: 90%;height: 30px;margin: 0 auto;justify-content: space-between;align-items: center;}
+ 		#dele{display: none;}
+ 		#cancle{font-size: 16px;}
+ 		.noData{text-align: center;color: #999;font-size: 16px;}
+ 	</style>
+</head>
+<body>
+<!--主体页面-->
+<div id="index">
+	<header>
+		<section>
+			<div id="nav">
+				<span>记事本</span>
+				<i id="search" class="mui-icon mui-icon-search"></i>
+			</div>
+			<div id="searchBar">
+				<p>
+					<i class="mui-icon mui-icon-search"></i>
+					<input type="" name="" id="" placeholder="内容搜索关键字" />
+				</p>
+				<span id="cancle">取消</span>
+			</div>
+		</section>
+	</header>
+	<span id="add" class="mui-icon mui-icon-plusempty"></span>
+	<ul id="lists"></ul>
+</div>
+<!--第二屏 滑动-->
+<div id="page2">
+	<nav id="nav_page2">
+		<span class="mui-icon mui-icon-back"></span>
+		<span class="mui-icon mui-icon-checkmarkempty"></span><span id="dele" class="mui-icon mui-icon-trash"></span>
+	</nav>
+	<p>
+		<time id="addTime">今天 </time>
+		<span id="num">0</span>
+	</p>
+	<textarea id="txt"></textarea>
+</div>
+<script type="text/javascript" src="js/move.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
